@@ -27,7 +27,16 @@ def sort_by_max(zoznam: list, dlzka: int):
             zoznam[max_index], zoznam[j-1] = zoznam[j-1], zoznam[max_index] #python swap
 
 
-#
+#insertionsort
+def insertion_sort(zoznam: list) -> list:
+    for i in range(1, len(zoznam)):
+        j = i
+        while j > 0 and zoznam[j-1] > zoznam[j]:
+            zoznam[j], zoznam[j-1] = zoznam[j-1], zoznam[j] #python swap
+            j -= 1
+    
+            
+
 
 
 
@@ -43,4 +52,9 @@ test_list2 = generuj(10)
 print(test_list2)
 sort_by_max(test_list2, len(test_list2))
 print(test_list2)
+
+test_list3 = generuj(10)
+print(test_list3)
+insertion_sort(test_list3)
+print(test_list3)
      
